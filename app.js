@@ -12,7 +12,7 @@ var app = express();
 //use router
 app.use('/',  home);
 app.get('/loadPage?:id', loadPage.loadPage);
-app.get('/pagination?:page', pagination.loadPagination);
+app.get('/pagination?:pagination', pagination.loadPagination);
 
 // some environment variables
 app.set('port', process.env.PORT || 3000);
