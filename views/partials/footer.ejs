@@ -1,5 +1,17 @@
 <!-- Footer Area
     ================================================== -->
+<div class="span8 blog">
+    <!-- Pagination -->
+    <div class="pagination">
+        <ul>
+          <li class="active"><a href="#">Prev</a></li>
+          <% for (var page=1; page<=pagination.pageCount; page++) { %>
+            <li class=" <% if (page==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination:<%=page%>"><%=page%></a></li>
+            <%}%>
+        <li><a href="#">Next</a></li>
+        </ul>
+    </div>
+</div>
 
 <div class="footer-container"><!-- Begin Footer -->
   <div class="container">
@@ -9,8 +21,8 @@
                <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
                 <address>
                     <strong>Design Team</strong><br />
-                    123 Main St, Suite 500<br />
-                    New York, NY 12345<br />
+                    02 Quang Trung St, Floor 11<br />
+                    Da Nang, NY 55000<br />
                 </address>
                 <ul class="social-icons">
                     <li><a href="https://www.facebook.com/escspaceblue" target="_blank" class="social-icon facebook"></a></li>

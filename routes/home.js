@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var pagination = require('./Pagination');
 
-var famousPage={
+var famousPage = {
   image:['img/gallery/slider-img-1.jpg',
          'img/gallery/slider-img-2.jpg',
          'img/gallery/slider-img-3.jpg',
@@ -13,7 +14,7 @@ var famousPage={
   refReadmore:'/'
 };
 
-var allPage=[{
+var allPage = [{
   data_id: 'id-1',
   hrefImageFull:'gallery-img-1-full.jpg',
   hrefPage:'#',
@@ -44,8 +45,12 @@ var allPage=[{
   hrefImageCol:'gallery-img-1-4col.jpg'
 }
 ];
+
+pagination.pagination.state="Home"
+var pagination=pagination.pagination
+
 router.get('/', function(req, res) {
-    res.render("pages/home",{idMenu:1,famousPage:famousPage,allPage:allPage});
+    res.render("pages/home",{idMenu:1,famousPage:famousPage,allPage:allPage,pagination:pagination});
 });
 
 router.post('/', function(req, res) {

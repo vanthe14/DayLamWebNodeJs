@@ -6,11 +6,13 @@ var engine = require('ejs-locals');
 //declare router
 var home    = require('./routes/home');
 var loadPage    = require('./routes/loadPage');
+var pagination = require('./routes/Pagination');
 var app = express();
 
 //use router
 app.use('/',  home);
 app.get('/loadPage?:id', loadPage.loadPage);
+app.get('/pagination?:page', pagination.loadPagination);
 
 // some environment variables
 app.set('port', process.env.PORT || 3000);
