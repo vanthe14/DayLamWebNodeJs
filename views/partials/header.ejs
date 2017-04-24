@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Học NodeJS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS
+================================================== -->
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/prettyPhoto.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+<link rel="stylesheet" href="css/custom-styles.css">
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/style-ie.css"/>
+<![endif]-->
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="img/nodejs.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- JS
+================================================== -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $("#btn-blog-next").click(function () {
+      $('#blogCarousel').carousel('next')
+    });
+     $("#btn-blog-prev").click(function () {
+      $('#blogCarousel').carousel('prev')
+    });
+
+     $("#btn-client-next").click(function () {
+      $('#clientCarousel').carousel('next')
+    });
+     $("#btn-client-prev").click(function () {
+      $('#clientCarousel').carousel('prev')
+    });
+
+});
+
+ $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });
+});
+
+</script>
+
+<div class="row header"><!-- Begin Header -->
+
+  <!-- Logo
+  ================================================== -->
+  <div class="span5 logo">
+    <a href="/"><img src="img/nodejs.png" alt="" /></a>
+      <h5>Big Things... Small Packages</h5>
+  </div>
+
+  <!-- Main Navigation
+  ================================================== -->
+  <div class="span7 navigation">
+      <div class="navbar hidden-phone">
+        <ul class="nav">
+        <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="/">Home <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="/">Full Page</a></li>
+                <li><a href="/index_gallery">Gallery Only</a></li>
+                <li><a href="/index_slider">Slider Only</a></li>
+            </ul>
+        </li>
+       <li><a href="/features">Features</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="/page_full_width">Full Width</a></li>
+                <li><a href="/page_right_sidebar">Right Sidebar</a></li>
+                <li><a href="/page_left_sidebar">Left Sidebar</a></li>
+                <li><a href="/page_double_sidebar">Double Sidebar</a></li>
+            </ul>
+        </li>
+         <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="gallery_4col">Gallery <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="/gallery_3col">Gallery 3 Column</a></li>
+                <li><a href="/gallery_4col">Gallery 4 Column</a></li>
+                <li><a href="/gallery_6col">Gallery 6 Column</a></li>
+                <li><a href="/gallery_4col_circle">Gallery 4 Round</a></li>
+                <li><a href="/gallery_single">Gallery Single</a></li>
+            </ul>
+         </li>
+         <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="/blog_style1">Blog <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="/blog_style1">Blog Style 1</a></li>
+                <li><a href="/blog_style2">Blog Style 2</a></li>
+                <li><a href="/blog_style3">Blog Style 3</a></li>
+                <li><a href="/blog_style4">Blog Style 4</a></li>
+                <li><a href="/blog_single">Blog Single</a></li>
+            </ul>
+         </li>
+         <li><a href="/loadPage?contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</html>
