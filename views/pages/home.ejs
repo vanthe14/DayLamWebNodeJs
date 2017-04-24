@@ -4,15 +4,82 @@
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Piccolo Theme</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body class="home">
-	<div class="jumbotron">
-            <h1>This is great</h1>
-            <p>Welcome to templating using EJS</p>
+    <div class="container">
+	    <div class="row headline"><!-- Begin Headline -->
+	     	<!-- Slider Carousel
+	        ================================================== -->
+				<%if(famousPage !=null){
+					var arrImage=famousPage.image;%>
+						<div class="span8">
+							<div class="flexslider">
+								<ul class="slides">
+					 				<%arrImage.forEach(function(result){ %>
+										 <li><a href="gallery-single.htm"><img src="<%= result %>" alt="slider" /></a></li>
+	    					 <%  }); %>
+							 </ul>
+						 </div>
+					 </div>
+
+					 <!-- Headline Text
+					 ================================================== -->
+					 <div class="span4">
+						<h3><%=famousPage.title %> </h3>
+							 <p class="lead"><%=famousPage.contentLead %></p>
+							 <p><%=famousPage.content %></p>
+							 <a href="<%=famousPage.refReadmore %>"><i class="icon-plus-sign"></i>Read More</a>
+					 </div>
+				<%}%>
+	    </div><!-- End Headline -->
+
+    <div class="row gallery-row"><!-- Begin Gallery Row -->
+
+    	<div class="span12">
+            <h5 class="title-bg">All Pages</h5>
+
+        <!-- Gallery Thumbnails
+        ================================================== -->
+
+            <div class="row clearfix no-margin">
+            <ul class="gallery-post-grid holder">
+  					<!-- Gallery Item 1 -->
+								<% if (allPage !=null) { %>
+											<% allPage.forEach(function (page) { %>
+												<li  class="span3 gallery-item" data-id="<%=page.pageId%>" data-type="illustration">
+														<span class="gallery-hover-4col hidden-phone hidden-tablet">
+																<span class="gallery-icons">
+																		<a href="img/gallery/<%=page.hrefImageFull%>" class="item-zoom-link lightbox" title="Custom Illustration" data-rel="prettyPhoto"></a>
+																		<a href="/<%=page.hrefPage%>" class="item-details-link"></a>
+																</span>
+														</span>
+														<a href="/<%=page.hrefPage%>"><img src="img/gallery/<%=page.hrefImageCol%>" alt="Gallery"></a>
+														<span class="project-details"><a href="/<%=page.hrefPage%>">Custom Illustration</a>For an international ad campaign.</span>
+												</li>
+											<% }); %>
+											<% }%>
+              </ul>
+            </div>
         </div>
+    </div><!-- End Gallery Row -->
+
+		<!-- Pagination -->
+		<div class="pagination">
+				<ul>
+				<li class="active"><a href="#">Prev</a></li>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">Next</a></li>
+				</ul>
+		</div>
+
+    </div> <!-- End Container -->
 
 </body>
 </html>

@@ -29,7 +29,7 @@
 
 <!-- JS
 ================================================== -->
-<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/jquery.flexslider.js"></script>
@@ -66,61 +66,64 @@ $(document).ready(function () {
 
 </script>
 
-<div class="row header"><!-- Begin Header -->
 
-  <!-- Logo
-  ================================================== -->
-  <div class="span5 logo">
-    <a href="/"><img src="img/nodejs.png" alt="" /></a>
-      <h5>Big Things... Small Packages</h5>
-  </div>
+<!-- End JS
+================================================== -->
+<body class="home">
+<div class="color-bar-1"></div>
+    <div class="color-bar-2 color-bg"></div>
+<div class="container">
+  <div class="row header"><!-- Begin Header -->
 
-  <!-- Main Navigation
-  ================================================== -->
-  <div class="span7 navigation">
-      <div class="navbar hidden-phone">
-        <ul class="nav">
-        <li class="dropdown active">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="/">Home <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="/">Full Page</a></li>
-                <li><a href="/index_gallery">Gallery Only</a></li>
-                <li><a href="/index_slider">Slider Only</a></li>
-            </ul>
-        </li>
-       <li><a href="/features">Features</a></li>
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="/page_full_width">Full Width</a></li>
-                <li><a href="/page_right_sidebar">Right Sidebar</a></li>
-                <li><a href="/page_left_sidebar">Left Sidebar</a></li>
-                <li><a href="/page_double_sidebar">Double Sidebar</a></li>
-            </ul>
-        </li>
-         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="gallery_4col">Gallery <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="/gallery_3col">Gallery 3 Column</a></li>
-                <li><a href="/gallery_4col">Gallery 4 Column</a></li>
-                <li><a href="/gallery_6col">Gallery 6 Column</a></li>
-                <li><a href="/gallery_4col_circle">Gallery 4 Round</a></li>
-                <li><a href="/gallery_single">Gallery Single</a></li>
-            </ul>
-         </li>
-         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="/blog_style1">Blog <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="/blog_style1">Blog Style 1</a></li>
-                <li><a href="/blog_style2">Blog Style 2</a></li>
-                <li><a href="/blog_style3">Blog Style 3</a></li>
-                <li><a href="/blog_style4">Blog Style 4</a></li>
-                <li><a href="/blog_single">Blog Single</a></li>
-            </ul>
-         </li>
-         <li><a href="/loadPage?contact">Contact</a></li>
-        </ul>
+    <!-- Logo
+    ================================================== -->
+    <div class="span5 logo">
+      <a href="/"><img src="img/nodejs.png" alt="" /></a>
+        <h5>Life is not fair, get used to it</h5>
+    </div>
+
+    <!-- Main Navigation
+    ================================================== -->
+    <div class="span7 navigation">
+        <div class="navbar hidden-phone">
+          <ul class="nav">
+          <li class="dropdown <% if (idMenu==1) { %> active <% } %>"><a href="/">Home</a> </li>
+          <li class="dropdown"><a href="/features">Features</a></li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  <li><a href="/page_full_width">Full Width</a></li>
+                  <li><a href="/page_right_sidebar">Right Sidebar</a></li>
+                  <li><a href="/page_left_sidebar">Left Sidebar</a></li>
+                  <li><a href="/page_double_sidebar">Double Sidebar</a></li>
+              </ul>
+            </li>
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="gallery_4col">Gallery <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  <li><a href="/gallery_3col">Gallery 3 Column</a></li>
+                  <li><a href="/gallery_4col">Gallery 4 Column</a></li>
+                  <li><a href="/gallery_6col">Gallery 6 Column</a></li>
+                  <li><a href="/gallery_4col_circle">Gallery 4 Round</a></li>
+                  <li><a href="/gallery_single">Gallery Single</a></li>
+              </ul>
+           </li>
+           <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/blog_style1">Blog <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  <li><a href="/blog_style1">Blog Style 1</a></li>
+                  <li><a href="/blog_style2">Blog Style 2</a></li>
+                  <li><a href="/blog_style3">Blog Style 3</a></li>
+                  <li><a href="/blog_style4">Blog Style 4</a></li>
+                  <li><a href="/blog_single">Blog Single</a></li>
+              </ul>
+           </li>
+           <li class="dropdown <% if (idMenu==7) { %> active <% } %>" ><a href="/loadPage?contact">Contact</a></li>
+
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  </div> <!-- End Container -->
+  </body>
 </html>
