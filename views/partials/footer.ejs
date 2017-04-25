@@ -4,11 +4,11 @@
     <!-- Pagination -->
     <div class="pagination">
         <ul>
-          <li class="active"><a href="#">Prev</a></li>
+          <li class="<% if (1==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=pagination.previousPage%>">Prev</a></li>
           <% for (var page=1; page<=pagination.pageCount; page++) { %>
-            <li class=" <% if (page==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination:<%=page%>"><%=page%></a></li>
+            <li class=" <% if (page==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=page%>"><%=page%></a></li>
             <%}%>
-        <li><a href="#">Next</a></li>
+        <li class="<% if (pagination.pageCount==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=pagination.nextPage%>">Next</a></li>
         </ul>
     </div>
 </div>

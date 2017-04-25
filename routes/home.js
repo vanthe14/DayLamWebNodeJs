@@ -47,10 +47,12 @@ var allPage = [{
 ];
 
 pagination.pagination.state="Home"
+pagination.pagination.pageCount=8
 var pagination=pagination.pagination
 
 router.get('/', function(req, res) {
     res.render("pages/home",{idMenu:1,famousPage:famousPage,allPage:allPage,pagination:pagination});
+    console.log(pagination.currentPage+"goi home");
 });
 
 router.post('/', function(req, res) {
