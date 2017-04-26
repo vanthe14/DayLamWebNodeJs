@@ -13,11 +13,11 @@ var pagination = require('pagination');
 router.get('/', function(req, res) {
   var currentPage=req.query.page;
   if(typeof currentPage=="undefined"){
-    var paginator = pagination.create('search', {prelink:'/', current: 0, rowsPerPage: 200, totalResult: 10020});
+    var paginator = pagination.create('search', {prelink:'/home', current: 0, rowsPerPage: 200, totalResult: 10020});
   }
   else{
      console.log(req.query.page);
-    var paginator = pagination.create('search', {prelink:'/', current: parseInt(currentPage)-1, rowsPerPage: 200, totalResult: 10020});
+    var paginator = pagination.create('search', {prelink:'/home', current: parseInt(currentPage)-1, rowsPerPage: 200, totalResult: 10020});
   }
 
 //  objpagination.pageCount=8

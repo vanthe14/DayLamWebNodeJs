@@ -13,7 +13,7 @@ var app = express();
 
 //use router
 app.use('/',  home);
-app.use('/?:page',  home);
+app.use('/home?:page',  home);
 app.get('/loadPage?:id', loadPage.loadPage);
 app.get('/pagination_href?:page', pagination.loadPagination);
 app.get('/blog_style1', blogs.blog_style1);
