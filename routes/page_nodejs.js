@@ -20,9 +20,3 @@ module.exports.detail= function(req, res) {
 
    res.render("pages/1",{idMenu:2});
 };
-
-// router.post('/', function(req, res) {
-//   res.render("pages/page-github",{idMenu:2,pagination:objpagination});;
-// };
-
-//module.exports = router;
