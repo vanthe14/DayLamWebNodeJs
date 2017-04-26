@@ -2,85 +2,106 @@
 module.exports.page_nodejs=[{
   hrefPage : "1",
   subject : "Tutorial Học Node js bài 1",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  title : "Bài này sẽ hướng dẫn cài đặt phần mềm cơ bản, node js + mysql + phần mềm lập trình được sử dụng trong Tutorial",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-1-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
 {
   hrefPage : "#",
   subject : "Tutorial Học Node js bài 2",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  title : "Khởi thức trong node js, tìm hiểu về cấu trúc cơ bản của NodeJS",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-2-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
 {
   hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  subject : "Tutorial Học Node js bài 3",
+  title : "Tạo dự án đầu tiên với NodeJS",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-3-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
 {
   hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  subject : "Tutorial Học Node js bài 4",
+  title : "Tìm hiểu về app.use(), router.use()",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-4-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
 {
   hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  subject : "Tutorial Học Node js bài 5",
+  title : "Tìm hiểu về module.exports và exports",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-5-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
 {
   hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  subject : "Tutorial Học Node js bài 6",
+  title : "Tìm hiểu về mô hình MVC",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-6-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
 {
   hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  subject : "Tutorial Học Node js bài 7",
+  title : "Tìm hiểu pagination trong node",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-7-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
 {
   hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
-  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
+  subject : "Tutorial Học Node js bài 8",
+  title : "Hướng dẫn làm trang web đơn giản với Node- phần 1",
   datePost : "9/01/15",
-  imgDisplay : "gallery-img-8-4col.jpg"
+  imgDisplay : "node_mysql.png"
 },
+{
+  hrefPage : "#",
+  subject : "Tutorial Học Node js bài 9",
+  title : "Hướng dẫn làm trang web đơn giản với Node- phần 2",
+  datePost : "9/01/15",
+  imgDisplay : "node_mysql.png"
+},
+{
+  hrefPage : "#",
+  subject : "Tutorial Học Node js bài 10",
+  title : "Hướng dẫn làm trang web đơn giản với Node- phần 3",
+  datePost : "9/01/15",
+  imgDisplay : "node_mysql.png"
+},
+{
+  hrefPage : "#",
+  subject : "Tutorial Học Node js bài 11",
+  title : "Hướng dẫn deploy trang web lên heroku",
+  datePost : "9/01/15",
+  imgDisplay : "node_mysql.png"
+}
 ]
 
 //allPage honme
 module.exports.allPageHome = [{
   data_id: 'id-1',
-  hrefImageFull:'gallery-img-1-full.jpg',
+  hrefImageFull:'java-design-patterns.png',
   hrefPage:'#',
-  hrefImageCol:'gallery-img-1-4col.jpg'
+  hrefImageCol:'java-design-patterns.png'
 },
 {
   data_id: 'id-2',
-  hrefImageFull:'gallery-img-2-full.jpg',
+  hrefImageFull:'javascript-design-patterns.jpg',
   hrefPage:'#',
-  hrefImageCol:'gallery-img-2-4col.jpg'
+  hrefImageCol:'javascript-design-patterns.jpg'
 },
 {
   data_id: 'id-3',
-  hrefImageFull:'gallery-img-3-full.jpg',
+  hrefImageFull:'java-design-patterns.png',
   hrefPage:'#',
-  hrefImageCol:'gallery-img-3-4col.jpg'
+  hrefImageCol:'java-design-patterns.png'
 },
 {
   data_id: 'id-4',
-  hrefImageFull:'gallery-img-4-full.jpg',
+  hrefImageFull:'javascript-design-patterns.jpg',
   hrefPage:'#',
-  hrefImageCol:'gallery-img-4-4col.jpg'
+  hrefImageCol:'javascript-design-patterns.jpg'
 },
 {
   data_id: 'id-5',
