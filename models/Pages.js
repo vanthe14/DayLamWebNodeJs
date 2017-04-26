@@ -1,49 +1,57 @@
 //Declare database example
-module.exports.page_github=[{
-  hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
+module.exports.page_nodejs=[{
+  hrefPage : "1",
+  subject : "Tutorial Học Node js bài 1",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-1-4col.jpg"
 },
 {
   hrefPage : "#",
-  subject : "A subject that is beautiful in itself",
+  subject : "Tutorial Học Node js bài 2",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-2-4col.jpg"
 },
 {
   hrefPage : "#",
   subject : "A subject that is beautiful in itself",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-3-4col.jpg"
 },
 {
   hrefPage : "#",
   subject : "A subject that is beautiful in itself",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-4-4col.jpg"
 },
 {
   hrefPage : "#",
   subject : "A subject that is beautiful in itself",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-5-4col.jpg"
 },
 {
   hrefPage : "#",
   subject : "A subject that is beautiful in itself",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-6-4col.jpg"
 },
 {
   hrefPage : "#",
   subject : "A subject that is beautiful in itself",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla iaculis mattis lorem, quis gravida nunc iaculis ac Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-7-4col.jpg"
 },
 {
   hrefPage : "#",
   subject : "A subject that is beautiful in itself",
+  title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.",
   datePost : "9/01/15",
   imgDisplay : "gallery-img-8-4col.jpg"
 },
@@ -119,7 +127,7 @@ module.exports.famousPageHome = {
          'img/gallery/slider-img-4.jpg'
        ],
   title: 'Welcome to NodeJS.',
-  contentLead:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium vulputate magna sit amet blandit.',
-  content:'Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et tortor. In sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultrices.',
+  contentLead:'Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.',
+  content:'This tutorial is designed for software programmers who want to learn the basics of Node.js and its architectural concepts. This tutorial will give you enough understanding on all the necessary components of Node.js with suitable examples.',
   refReadmore:'/'
 };

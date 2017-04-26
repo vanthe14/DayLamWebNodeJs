@@ -1,5 +1,3 @@
-var pagination = require('./Pagination');
-
 module.exports.blog_single = function(req, res, next) {
       res.render("blog-single");
 }

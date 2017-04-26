@@ -1,30 +1,29 @@
 <!-- Footer Area
     ================================================== -->
-<div class="span8 blog">
+  <% if(typeof paginator!="undefined"){ %>
+<div class="span10 blog">
     <!-- Pagination -->
     <div class="pagination">
-      <%=paginator.preparedPreLink %>
         <ul>
-          <% if (paginator.previous) {%>
-              <li class="disabled"><a href="/pagination?pagination=<%=paginator.previous%>">Prev</a></li>
-            <% } %>
-
+            <li class="" <% if (!paginator.previous) {%>style="display:none;" <% } %>><a href="<%=paginator.prelink%>?page=<%=parseInt(paginator.previous) + 1%>">Prev</a></li>
           <% for (var page=0; page<paginator.range.length; page++) { %>
-            <li class=" <% if (page==paginator.current) { %> active <% } %>"><a href="<%=paginator.prelink%>?page=<%=paginator.range[page]%>"><%=paginator.range[page]%></a></li>
+            <li class=" <% if (paginator.range[page]==paginator.next) { %> active <% } %>"><a href="<%=paginator.prelink%>?page=<%=paginator.range[page]%>"><%=paginator.range[page]%></a></li>
             <%}%>
-        <li class="<% if (paginator.pageCount==paginator.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=paginator.next%>">Next</a></li>
+          <% if (paginator.next<paginator.pageCount) {%>
+            <li class=""><a href="<%=paginator.prelink%>?page=<%=parseInt(paginator.next) + 1%>">Next</a></li>
+          <% } %>
         </ul>
     </div>
 </div>
-
+<%} %>
 <div class="footer-container"><!-- Begin Footer -->
   <div class="container">
       <div class="row footer-row">
             <div class="span3 footer-col">
-                <h5>About Us</h5>
-               <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
+                <h5>About Me</h5>
+               <img src="img/nodejs.png" alt="Piccolo" /><br /><br />
                 <address>
-                    <strong>Design Team</strong><br />
+                    <strong>Design Personal</strong><br />
                     02 Quang Trung St, Floor 11<br />
                     Da Nang, NY 55000<br />
                 </address>
@@ -37,12 +36,19 @@
                 </ul>
             </div>
             <div class="span3 footer-col">
-                <h5>Latest Tweets</h5>
-                <ul>
-                    <li><a href="#">@room122</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    <li><a href="#">@room122</a> In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices.</li>
-                    <li><a href="#">@room122</a> Vivamus nec lectus sed orci molestie molestie. Etiam mattis neque eu orci rutrum aliquam.</li>
-                </ul>
+              <h5>Email Updates</h5>
+              <div class="footer-box-text footer-box-text-subscribe">
+                <p>Enter your email and you'll be one of the first to get new updates:</p>
+                <form role="form" action="#" method="post">
+                  <div class="form-group">
+                    <label class="sr-only" for="subscribe-email">Email address</label>
+                      <input type="text" name="email" placeholder="Email..." class="subscribe-email form-control" id="subscribe-email">
+                    </div>
+                  <button type="submit" class="btn-info">Subscribe</button>
+              </form>
+              <p class="success-message"></p>
+              <p class="error-message"></p>
+              </div>
             </div>
             <div class="span3 footer-col">
                 <h5>Latest Posts</h5>
@@ -57,18 +63,18 @@
             <div class="span3 footer-col">
                 <h5>Flickr Photos</h5>
                 <ul class="img-feed">
-                    <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-2.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-3.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-4.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-5.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-6.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-7.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-8.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-9.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-10.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-11.jpg" alt="Image Feed"></a></li>
-                    <li><a href="#"><img src="img/gallery/flickr-img-12.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-2.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-3.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-4.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-5.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-6.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-7.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-8.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-9.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-10.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-11.jpg" alt="Image Feed"></a></li>
+                    <li><a href=""><img src="img/gallery/flickr-img-12.jpg" alt="Image Feed"></a></li>
                 </ul>
             </div>
         </div>
