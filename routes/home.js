@@ -7,17 +7,17 @@ var database = require('../models/Pages');
 //Get data from database example
 var famousPage=database.famousPageHome;
 var allPage=database.allPageHome
-
+var pagination = require('pagination');
 //var objpagination=pagination.pagination
-
+var paginator = pagination.create('search', {prelink:'/', current: 3, rowsPerPage: 200, totalResult: 10020});
 router.get('/', function(req, res) {
 //  objpagination.pageCount=8
 //  objpagination.state="/"
 
 //  console.log(objpagination.currentPage+"currentPage goi home");
-   var pagination = require('pagination');
-   var paginator = pagination.create('search', {prelink:'/pagination_href?page=', current: 1, rowsPerPage: 200, totalResult: 10020});
-   paginator.render();
+
+
+//   paginator.render();
    //console.log(paginator.render());
   res.render("pages/home",{idMenu:1,famousPage:famousPage,allPage:allPage,paginator:paginator.getPaginationData()});
 });

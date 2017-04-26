@@ -1,5 +1,6 @@
 var express    = require("express");
 var router = express.Router();
+var pagination = require('pagination');
 
 var pagination = {
   state : null,
@@ -11,9 +12,10 @@ var pagination = {
 
 module.exports.pagination=pagination;
 module.exports.loadPagination = function(req, res, next) {
-  console.log("cai lui")
+
   //req.params.id when use/p/:param1
-  // var currentPage=req.query.page;
+   var currentPage=req.query.page;
+   console.log("cai lui"+currentPage)
   // pagination.currentPage=currentPage;
   // if(parseInt(currentPage)>1){
   //   pagination.previousPage=parseInt(currentPage)-1;
@@ -21,6 +23,6 @@ module.exports.loadPagination = function(req, res, next) {
   // if(parseInt(currentPage)==1||parseInt(currentPage)<pagination.pageCount){
   //   pagination.nextPage=parseInt(currentPage)+1;
   // }
-  //   res.redirect(pagination.state);
+     res.redirect("/");
   //  res.render("pages/home");
 }

@@ -3,9 +3,12 @@
 <div class="span8 blog">
     <!-- Pagination -->
     <div class="pagination">
-      <%=paginator.prelink %>
+      <%=paginator.preparedPreLink %>
         <ul>
-          <li class="<% if (1==paginator.current) { %> disable <% } %>"><a href="/pagination?pagination=<%=paginator.previous%>">Prev</a></li>
+          <% if (paginator.previous) {%>
+              <li class="active"><a href="/pagination?pagination=<%=paginator.previous%>">Prev</a></li>
+            <% } %>
+
           <% for (var page=1; page<=paginator.range.length; page++) { %>
             <li class=" <% if (page==paginator.current) { %> active <% } %>"><a href="/pagination_href?page=<%=paginator.range[page]%>"><%=page%></a></li>
             <%}%>
