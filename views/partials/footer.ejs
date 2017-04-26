@@ -3,12 +3,13 @@
 <div class="span8 blog">
     <!-- Pagination -->
     <div class="pagination">
+      <%=paginator.prelink %>
         <ul>
-          <li class="<% if (1==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=pagination.previousPage%>">Prev</a></li>
-          <% for (var page=1; page<=pagination.pageCount; page++) { %>
-            <li class=" <% if (page==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=page%>"><%=page%></a></li>
+          <li class="<% if (1==paginator.current) { %> disable <% } %>"><a href="/pagination?pagination=<%=paginator.previous%>">Prev</a></li>
+          <% for (var page=1; page<=paginator.range.length; page++) { %>
+            <li class=" <% if (page==paginator.current) { %> active <% } %>"><a href="/pagination_href?page=<%=paginator.range[page]%>"><%=page%></a></li>
             <%}%>
-        <li class="<% if (pagination.pageCount==pagination.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=pagination.nextPage%>">Next</a></li>
+        <li class="<% if (paginator.pageCount==paginator.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=paginator.next%>">Next</a></li>
         </ul>
     </div>
 </div>
