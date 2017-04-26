@@ -7,16 +7,19 @@ var database = require('../models/Pages');
 
 var pagination = require('pagination');
 //var objpagination=pagination.pagination
-var paginator = pagination.create('search', {prelink:'/', current: 2, rowsPerPage: 200, totalResult: 10020});
+
 router.get('/', function(req, res) {
-
-  //objpagination.state="/page_github?id=2"
-  //objpagination.pageCount=5;
-
-  var id=req.query.id;
-
-  res.render("pages/page-github",{idMenu:id,paginator:paginator.getPaginationData()});
-  console.log(objpagination.currentPage+"currentPage goi github");
+  // var currentPage=req.query.page;
+  // if(typeof currentPage=="undefined"){
+  //   var paginator = pagination.create('search', {prelink:'/page_github', current: 0, rowsPerPage: 200, totalResult: 10020});
+  // }
+  // else{
+  //    console.log(req.query.page);
+  //   var paginator = pagination.create('search', {prelink:'/page_github', current: parseInt(currentPage)-1, rowsPerPage: 200, totalResult: 10020});
+  // }
+  //
+  // res.render("pages/page-github",{idMenu:id,paginator:paginator.getPaginationData()});
+  console.log("currentPage goi github");
 });
 
 router.post('/', function(req, res) {

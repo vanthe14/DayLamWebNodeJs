@@ -6,11 +6,11 @@
       <%=paginator.preparedPreLink %>
         <ul>
           <% if (paginator.previous) {%>
-              <li class="active"><a href="/pagination?pagination=<%=paginator.previous%>">Prev</a></li>
+              <li class="disabled"><a href="/pagination?pagination=<%=paginator.previous%>">Prev</a></li>
             <% } %>
 
-          <% for (var page=1; page<=paginator.range.length; page++) { %>
-            <li class=" <% if (page==paginator.current) { %> active <% } %>"><a href="/pagination_href?page=<%=paginator.range[page]%>"><%=page%></a></li>
+          <% for (var page=0; page<paginator.range.length; page++) { %>
+            <li class=" <% if (page==paginator.current) { %> active <% } %>"><a href="<%=paginator.prelink%>?page=<%=paginator.range[page]%>"><%=paginator.range[page]%></a></li>
             <%}%>
         <li class="<% if (paginator.pageCount==paginator.currentPage) { %> active <% } %>"><a href="/pagination?pagination=<%=paginator.next%>">Next</a></li>
         </ul>
