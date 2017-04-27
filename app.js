@@ -17,6 +17,7 @@ app.get('/blog_style1', blogs.blog_style1);
 
 app.get('/page_nodejs?:page',page_nodejs.page_nodejs)
 app.post('/detail?:page',page_nodejs.detail)
+
 app.use('/page_contact',  page_contact);
 
 // some environment variables

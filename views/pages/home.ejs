@@ -9,7 +9,8 @@
 
 </head>
 
-<body class="home">
+<body class="home" >
+	<div class="container main-container" id="home">
 	    <div class="row headline"><!-- Begin Headline -->
 	     	<!-- Slider Carousel
 	        ================================================== -->
@@ -53,11 +54,11 @@
 														<span class="gallery-hover-4col hidden-phone hidden-tablet">
 																<span class="gallery-icons">
 																		<a href="img/gallery/<%=page.hrefImageFull%>" class="item-zoom-link lightbox" title="View full image" data-rel="prettyPhoto"></a>
-																		<a href="/<%=page.hrefPage%>" class="item-details-link"></a>
+																		<a href="" class="item-details-link"></a>
 																</span>
 														</span>
 														<a href="/<%=page.hrefPage%>"><img src="img/gallery/<%=page.hrefImageCol%>" alt="Gallery"></a>
-														<span class="project-details"><a href="/<%=page.hrefPage%>">Hướng dẫn học</a>Cho những người mới bắt đầu học</span>
+														<span class="project-details"><a onclick=replacePageHome("/home/about?page=<%=page.hrefPage%>")>Hướng dẫn học</a>Cho những người mới bắt đầu học</span>
 												</li>
 											<% }); %>
 								<% }%>
@@ -65,5 +66,68 @@
             </div>
         </div>
     </div><!-- End Gallery Row -->
+	</div>
 </body>
 </html>
+
+<!-- load page -->
+<script>
+var replacePageHome = function(url) {
+  console.log(url);
+   $.ajax({
+     type: 'GET',
+     url: url,
+     cache: false,
+     dataType: 'html'
+   })
+   .done( function(objReceive) {
+		 var template = JSON.parse(objReceive).templateHome;
+     var html=JSON.parse(objReceive).templateString;
+     var relatedPageContentNodejs=JSON.parse(objReceive).relatedPageContentNodejs;
+     var htmlRelatePage="";
+
+		 $('#home').html(template);
+     for (var i = 0, len = relatedPageContentNodejs.length; i < len; i++) {
+          htmlRelatePage += '<li>'
+          htmlRelatePage += '<a href="#"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>'
+          htmlRelatePage += '<h6><a href="#" onclick=replacePage("detail?page='+relatedPageContentNodejs[i].hrefPage +'");return false;>'+relatedPageContentNodejs[i].title+'</a></h6>'
+          htmlRelatePage += '<em>Posted on '+relatedPageContentNodejs[i].datePost+ '</em>'
+          htmlRelatePage += '</li>'
+     }
+     //console.log(htmlRelatePage);
+     $('#loadpage').html(html);
+     $('#relatedPage').html(htmlRelatePage);
+     $('#pagination').html("");
+
+   });
+ };
+
+ var replacePage = function(url) {
+   console.log(url);
+    $.ajax({
+      type: 'POST',
+      url: url,
+      cache: false,
+      dataType: 'html'
+    })
+    .done( function(objReceive) {
+      var html=JSON.parse(objReceive).templateString;
+      var relatedPageContentNodejs=JSON.parse(objReceive).relatedPageContentNodejs;
+      var htmlRelatePage="";
+
+      for (var i = 0, len = relatedPageContentNodejs.length; i < len; i++) {
+           htmlRelatePage += '<li>'
+           htmlRelatePage += '<a href="#"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>'
+           htmlRelatePage += '<h6><a href="#" onclick=replacePage("detail?page='+relatedPageContentNodejs[i].hrefPage +'");return false;>'+relatedPageContentNodejs[i].title+'</a></h6>'
+           htmlRelatePage += '<em>Posted on '+relatedPageContentNodejs[i].datePost+ '</em>'
+           htmlRelatePage += '</li>'
+      }
+      console.log(htmlRelatePage);
+      $('#loadpage').html(html);
+      $('#relatedPage').html(htmlRelatePage);
+      $('#pagination').html("");
+
+    });
+  };
+
+</script>

@@ -81,19 +81,19 @@ module.exports.page_nodejs=[{
 module.exports.allPageHome = [{
   data_id: 'id-1',
   hrefImageFull:'java-design-patterns.png',
-  hrefPage:'#',
+  hrefPage:'1.ejs',
   hrefImageCol:'java-design-patterns.png'
 },
 {
   data_id: 'id-2',
   hrefImageFull:'javascript-design-patterns.jpg',
-  hrefPage:'#',
+  hrefPage:'2.ejs',
   hrefImageCol:'javascript-design-patterns.jpg'
 },
 {
   data_id: 'id-3',
   hrefImageFull:'java-design-patterns.png',
-  hrefPage:'#',
+  hrefPage:'2.ejs',
   hrefImageCol:'java-design-patterns.png'
 },
 {

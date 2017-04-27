@@ -19,12 +19,13 @@ module.exports.page_nodejs= function(req, res) {
 
 module.exports.detail= function(req, res) {
   var pageDisplay=req.query.page;
+  
   try {
     var templateString = fs.readFileSync('views/pages/'+ pageDisplay, 'utf-8');
     var relatedPageContentNodejs=database.relatedPageContentNodejs
     var objSend={"templateString":templateString,"relatedPageContentNodejs":relatedPageContentNodejs}
+
     res.send(objSend);
-    console.log(objSend.templateString);
   } catch (err) {
     res.send("Trang không tồn tại");
   };
