@@ -26,8 +26,8 @@
                   <% allPage.forEach(function (page) { %>
                     <!-- Blog Post 1 -->
                     <article class="clearfix">
-                        <a href="detail?page=<%= page.hrefPage %>"><img src="../img/gallery/<%= page.imgDisplay %>" alt="Post Thumb" class="align-left"></a>
-                        <h4 class="title-bg"><a href=replacePage("detail?page=<%= page.hrefPage %>")><%= page.subject %></a></h4>
+                        <a><img src="../img/gallery/<%= page.imgDisplay %>" alt="Post Thumb" class="align-left"></a>
+                        <h4 class="title-bg"><a><%= page.subject %></a></h4>
                             <p><%= page.title %></p>
                               <button class="btn btn-mini btn-inverse" type="button" onclick=replacePage("detail?page=<%= page.hrefPage %>")>Read more</button>
                             <div class="post-summary-footer">
@@ -63,22 +63,19 @@
             </ul>
 
             <!--Popular Posts-->
-            <h5 class="title-bg">Popular Posts</h5>
+            <h5 class="title-bg">Related Posts</h5>
             <ul class="popular-posts">
-                <li>
-                    <a href="#"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>
-                    <h6><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h6>
-                    <em>Posted on 09/01/15</em>
-                </li>
-                <li>
-                    <a href="#"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>
-                    <h6><a href="#">Nulla iaculis mattis lorem, quis gravida nunc iaculis</a></h6>
-                    <em>Posted on 09/01/15</em>
-                <li>
-                    <a href="#"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>
-                    <h6><a href="#">Vivamus tincidunt sem eu magna varius elementum maecenas felis</a></h6>
-                    <em>Posted on 09/01/15</em>
-                </li>
+              <div id="relatedPage">
+                <% if (relatedPage !=null) { %>
+                    <% relatedPage.forEach(function (page) { %>
+                      <li>
+                          <a href="#"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>
+                          <h6><a href="#" onclick=replacePage("detail?page=<%= page.hrefPage %>");return false;>Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h6>
+                          <em>Posted on <%= page.datePost %></em>
+                      </li>
+                    <% }); %>
+                  <% }%>
+                </div>
             </ul>
 
             <!--Tabbed Content-->
@@ -117,7 +114,7 @@
 
             <!--Video Widget-->
             <h5 class="title-bg">Video Widget</h5>
-            <iframe src="http://player.vimeo.com/video/24496773" width="370" height="208"></iframe>
+            <iframe src="https://player.vimeo.com/video/24496773" width="370" height="208"></iframe>
         </div>
 
     </div>
@@ -137,9 +134,23 @@ var replacePage = function(url) {
      cache: false,
      dataType: 'html'
    })
-   .done( function(html) {
-     console.log(html);
+   .done( function(objReceive) {
+     var html=JSON.parse(objReceive).templateString;
+     var relatedPageContentNodejs=JSON.parse(objReceive).relatedPageContentNodejs;
+     var htmlRelatePage="";
+
+     for (var i = 0, len = relatedPageContentNodejs.length; i < len; i++) {
+          htmlRelatePage += '<li>'
+          htmlRelatePage += '<a href="#"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>'
+          htmlRelatePage += '<h6><a href="#" onclick=replacePage("detail?page='+relatedPageContentNodejs[i].hrefPage +'");return false;>'+relatedPageContentNodejs[i].title+'</a></h6>'
+          htmlRelatePage += '<em>Posted on '+relatedPageContentNodejs[i].datePost+ '</em>'
+          htmlRelatePage += '</li>'
+     }
+     console.log(htmlRelatePage);
      $('#loadpage').html(html);
+     $('#relatedPage').html(htmlRelatePage);
+     $('#pagination').html("");
+
    });
  };
 </script>

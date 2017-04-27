@@ -3,7 +3,7 @@
   <% if(typeof paginator!="undefined"){ %>
 <div class="span10 blog">
     <!-- Pagination -->
-    <div class="pagination">
+    <div class="pagination" id="pagination">
         <ul>
             <li class="" <% if (!paginator.previous) {%>style="display:none;" <% } %>><a href="<%=paginator.prelink%>?page=<%=parseInt(paginator.previous) + 1%>">Prev</a></li>
           <% for (var page=0; page<paginator.range.length; page++) { %>

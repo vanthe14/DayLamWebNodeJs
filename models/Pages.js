@@ -75,8 +75,7 @@ module.exports.page_nodejs=[{
   title : "Hướng dẫn deploy trang web lên heroku",
   datePost : "9/01/15",
   imgDisplay : "node_mysql.png"
-}
-]
+}];
 
 //allPage honme
 module.exports.allPageHome = [{
@@ -138,8 +137,7 @@ module.exports.allPageHome = [{
   hrefImageFull:'gallery-img-10-full.jpg',
   hrefPage:'#',
   hrefImageCol:'gallery-img-10-4col.jpg'
-}
-];
+}];
 /*famousPage home*/
 module.exports.famousPageHome = {
   image:['img/gallery/slider-img-1.jpg',
@@ -152,3 +150,43 @@ module.exports.famousPageHome = {
   content:'This tutorial is designed for software programmers who want to learn the basics of Node.js and its architectural concepts. This tutorial will give you enough understanding on all the necessary components of Node.js with suitable examples.',
   refReadmore:'/'
 };
+
+/* related page */
+module.exports.relatedPageNodejs=[
+{
+    hrefPage : "3.ejs",
+    subject : "Tutorial Học Node js bài 3",
+    title : "Tạo dự án đầu tiên với NodeJS",
+    datePost : "9/01/15",
+    imgDisplay : "node_mysql.png"
+  },
+  {
+    hrefPage : "4.ejs",
+    subject : "Tutorial Học Node js bài 4",
+    title : "Tìm hiểu về app.use(), router.use()",
+    datePost : "9/01/15",
+    imgDisplay : "node_mysql.png"
+  }
+];
+
+module.exports.relatedPageContentNodejs=[{
+    hrefPage : "2.ejs",
+    subject : "Tutorial Học Node js bài 2",
+    title : "Khởi thức trong node js, tìm hiểu về cấu trúc cơ bản của NodeJS",
+    datePost : "9/01/15",
+    imgDisplay : "node_mysql.png"
+  },
+  {
+    hrefPage : "3.ejs",
+    subject : "Tutorial Học Node js bài 3",
+    title : "Tạo dự án đầu tiên với NodeJS",
+    datePost : "9/01/15",
+    imgDisplay : "node_mysql.png"
+  },
+  {
+    hrefPage : "4.ejs",
+    subject : "Tutorial Học Node js bài 4",
+    title : "Tìm hiểu về app.use(), router.use()",
+    datePost : "9/01/15",
+    imgDisplay : "node_mysql.png"
+  }];
