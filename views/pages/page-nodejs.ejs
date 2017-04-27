@@ -19,28 +19,30 @@
 
         <!-- Blog Posts
         ================================================== -->
-        <div class="span8 blog">
-          <% if (allPage !=null) { %>
-                <% allPage.forEach(function (page) { %>
-                  <!-- Blog Post 1 -->
-                  <article class="clearfix">
-                      <a href="detail?page=<%= page.hrefPage %>"><img src="../img/gallery/<%= page.imgDisplay %>" alt="Post Thumb" class="align-left"></a>
-                      <h4 class="title-bg"><a href="detail?page=<%= page.hrefPage %>"><%= page.subject %></a></h4>
-                          <p><%= page.title %></p>
-                          <a href="detail?page=<%= page.hrefPage %>"><button class="btn btn-mini btn-inverse" type="button">Read more</button></a>
-                          <div class="post-summary-footer">
-                              <ul class="post-data-3">
-                                  <li><i class="icon-calendar"></i> <%= page.datePost %></li>
-                                  <li><i class="icon-user"></i> <a href="#">Admin</a></li>
-                                  <li><i class="icon-comment"></i> <a href="#">5 Comments</a></li>
-                                  <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a></li>
-                              </ul>
-                          </div>
-                  </article>
-                <% }); %>
-          <% }%>
-        </div>
 
+          <div class="span8 blog">
+            <div id="loadpage" >
+            <% if (allPage !=null) { %>
+                  <% allPage.forEach(function (page) { %>
+                    <!-- Blog Post 1 -->
+                    <article class="clearfix">
+                        <a href="detail?page=<%= page.hrefPage %>"><img src="../img/gallery/<%= page.imgDisplay %>" alt="Post Thumb" class="align-left"></a>
+                        <h4 class="title-bg"><a href=replacePage("detail?page=<%= page.hrefPage %>")><%= page.subject %></a></h4>
+                            <p><%= page.title %></p>
+                              <button class="btn btn-mini btn-inverse" type="button" onclick=replacePage("detail?page=<%= page.hrefPage %>")>Read more</button>
+                            <div class="post-summary-footer">
+                                <ul class="post-data-3">
+                                    <li><i class="icon-calendar"></i> <%= page.datePost %></li>
+                                    <li><i class="icon-user"></i> <a href="#">Admin</a></li>
+                                    <li><i class="icon-comment"></i> <a href="#">5 Comments</a></li>
+                                    <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a></li>
+                                </ul>
+                            </div>
+                    </article>
+                  <% }); %>
+            <% }%>
+          </div>
+        </div>
         <!-- Blog Sidebar
         ================================================== -->
         <div class="span4 sidebar">
@@ -124,3 +126,20 @@
 
 </body>
 </html>
+
+<!-- load page -->
+<script>
+var replacePage = function(url) {
+  console.log(url);
+   $.ajax({
+     type: 'POST',
+     url: url,
+     cache: false,
+     dataType: 'html'
+   })
+   .done( function(html) {
+     console.log(html);
+     $('#loadpage').html(html);
+   });
+ };
+</script>

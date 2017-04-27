@@ -9,6 +9,7 @@
   "author": "Day lam Node JS",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "ejs-locals": "^1.0.2",
     "express": "^4.15.2",
     "pagination": "^0.4.4"

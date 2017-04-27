@@ -1,5 +1,9 @@
 var database = require('../models/Pages');
 var pagination = require('pagination');
+var fs = require('fs');
+var Promise = require('bluebird');
+var ejs = Promise.promisifyAll(require('ejs'));
+
 
 module.exports.page_nodejs= function(req, res) {
   var displayPages=database.page_nodejs;
@@ -17,6 +21,10 @@ module.exports.page_nodejs= function(req, res) {
 
 module.exports.detail= function(req, res) {
   var pageDisplay=req.query.page;
-
-   res.render("pages/1",{idMenu:2});
-};
+  try {
+    var templateString = fs.readFileSync('views/pages/'+ pageDisplay +'.ejs', 'utf-8');
+    res.send(templateString);
+  } catch (err) {
+    res.send("Trang không tồn tại");
+  };
+}
