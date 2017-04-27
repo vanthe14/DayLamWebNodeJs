@@ -1,27 +1,27 @@
 //Declare database example
 module.exports.page_nodejs=[{
-  hrefPage : "1",
+  hrefPage : "1.ejs",
   subject : "Tutorial Học Node js bài 1",
   title : "Bài này sẽ hướng dẫn cài đặt phần mềm cơ bản, node js + mysql + phần mềm lập trình được sử dụng trong Tutorial",
   datePost : "9/01/15",
   imgDisplay : "node_mysql.png"
 },
 {
-  hrefPage : "#",
+  hrefPage : "2.ejs",
   subject : "Tutorial Học Node js bài 2",
   title : "Khởi thức trong node js, tìm hiểu về cấu trúc cơ bản của NodeJS",
   datePost : "9/01/15",
   imgDisplay : "node_mysql.png"
 },
 {
-  hrefPage : "#",
+  hrefPage : "3.ejs",
   subject : "Tutorial Học Node js bài 3",
   title : "Tạo dự án đầu tiên với NodeJS",
   datePost : "9/01/15",
   imgDisplay : "node_mysql.png"
 },
 {
-  hrefPage : "#",
+  hrefPage : "4.ejs",
   subject : "Tutorial Học Node js bài 4",
   title : "Tìm hiểu về app.use(), router.use()",
   datePost : "9/01/15",

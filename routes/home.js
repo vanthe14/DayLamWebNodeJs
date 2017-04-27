@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  res.render("home");
+  res.render("pages/home");
 });
 
 module.exports = router;

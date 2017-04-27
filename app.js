@@ -7,7 +7,7 @@ var engine = require('ejs-locals');
 var home    = require('./routes/home');
 var blogs = require('./routes/blogs');
 var page_nodejs = require('./routes/page_nodejs');
-
+var page_contact = require('./routes/contact');
 var app = express();
 
 //use router
@@ -17,6 +17,8 @@ app.get('/blog_style1', blogs.blog_style1);
 
 app.get('/page_nodejs?:page',page_nodejs.page_nodejs)
 app.post('/detail?:page',page_nodejs.detail)
+app.use('/page_contact',  page_contact);
+
 // some environment variables
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
