@@ -1,9 +1,6 @@
 var database = require('../models/Pages');
 var pagination = require('pagination');
 var fs = require('fs');
-var Promise = require('bluebird');
-var ejs = Promise.promisifyAll(require('ejs'));
-
 
 module.exports.page_nodejs= function(req, res) {
   var displayPages=database.page_nodejs;
