@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
   res.render("pages/home",{idMenu:1,famousPage:famousPage,allPage:allPage,paginator:paginator.getPaginationData()});
 });
 
-router.get('/about?:page', function(req, res) {
+router.post('/about?:page', function(req, res) {
   var pageDisplay=req.query.page;
 
   try {
